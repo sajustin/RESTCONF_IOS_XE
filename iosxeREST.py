@@ -43,7 +43,6 @@ import re
 import traceback
 
 
-
 # Suppressing warnings for non-secure connection
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
