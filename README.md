@@ -9,7 +9,10 @@ Available YANG models on Cisco IOS-XE can be found on following Git https://gith
 
 Constructing RESTCONF URIs:
 
+```
 https://<ADDRESS>/<ROOT>/<DATA STORE>/<[YANG MODULE:]CONTAINER>/<LEAF>[?<OPTION>]
+```
+
 
 For now, you can show/change the hostname and show/change/add VLAN's through a Python shell.
 
@@ -42,4 +45,34 @@ switch(config)restconf
 switch(config)ip http server
 switch(config)ip http authentication local
 switch(config)ip http secure-server
+```
+
+### Using the script
+
+```
+python3 IosXeRest.py
+
+Please make sure the following requirements are met:
+
+     - Only run this scrip with a Python 3 interpreter.
+     - Make sure you have enabled the restconf interface on the switch.
+     - Make sure HTTP(S) is enable on the switch.
+
+The IPv4 address of the switch: <IP_ADDRESS>
+The username: <USERNAME>
+The password: <PASSWORD>
+
+Press Enter to continue...
+
+Choose between the followig possibilities:
+
+ 1. Show the hostname
+ 2. Change the hostname
+ 3. Get interface with configured IP address
+ 4. Configure an IP address on interface
+ 5. Get list of configured VLANs
+ 6. Configure a new VLAN
+ 7. Verify the output of a YANG container
+  Make your choice:
+
 ```
