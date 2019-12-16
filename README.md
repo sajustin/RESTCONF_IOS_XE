@@ -1,13 +1,16 @@
-RESTCONF examples for IOS-XE on Cisco Catalyst
+# RESTCONF examples for IOS-XE on Cisco Catalyst
 
 This Python script allows you to communicate with a Cisco Catalyst switch through RESTCONF and Python.
 RESTCONF is a new way to configure and automate network devices and supports XML and JSON.
 This basic script is created to show the possibilities what you can do with RESTCONF without touching CLI by leveraging YANG models.
 Available YANG models on Cisco IOS-XE can be found on following Git https://github.com/YangModels/yang/tree/master/vendor/cisco/xe.
 
+## Getting Started
+
 Constructing RESTCONF URIs:
-   https://<ADDRESS>/<ROOT>/<DATA STORE>/<[YANG MODULE:]CONTAINER>/<LEAF>[?<OPTION>]
- For now, you can show/change the hostname and show/change/add VLAN's through a Python shell.
+
+  https://<ADDRESS>/<ROOT>/<DATA STORE>/<[YANG MODULE:]CONTAINER>/<LEAF>[?<OPTION>]
+  For now, you can show/change the hostname and show/change/add VLAN's through a Python shell.
 
 
     This Python script leverages RESTCONF to:
