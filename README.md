@@ -9,9 +9,9 @@ Available YANG models on Cisco IOS-XE can be found on following Git https://gith
 
 Constructing RESTCONF URIs:
 
-  https://<ADDRESS>/<ROOT>/<DATA STORE>/<[YANG MODULE:]CONTAINER>/<LEAF>[?<OPTION>]
-  For now, you can show/change the hostname and show/change/add VLAN's through a Python shell.
+https://<ADDRESS>/<ROOT>/<DATA STORE>/<[YANG MODULE:]CONTAINER>/<LEAF>[?<OPTION>]
 
+For now, you can show/change the hostname and show/change/add VLAN's through a Python shell.
 
     This Python script leverages RESTCONF to:
         - Display the hostname of the network device
@@ -25,9 +25,19 @@ Constructing RESTCONF URIs:
     This script targets the RESTCONF that leverages a Catalyst 9300 as
     a target.
 
-    Requirements:
-        Python
-            - requests
-        IOS-XE
-            - enable RESTCONF
-            - enable HTTPS
+
+### Prerequisites
+
+Requirements:
+  Python
+    - requests
+  IOS-XE
+    - enable RESTCONF
+    - enable HTTPS
+
+```
+switch(config)restconf
+switch(config)ip http server
+switch(config)ip http authentication local
+switch(config)ip http secure-server
+```
