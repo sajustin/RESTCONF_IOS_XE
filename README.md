@@ -29,11 +29,13 @@ For now, you can show/change the hostname and show/change/add VLAN's through a P
 ### Prerequisites
 
 Requirements:
-  Python
-    - requests
-  IOS-XE
-    - enable RESTCONF
-    - enable HTTPS
+
+Python
+* requests
+
+IOS-XE
+* enable RESTCONF
+* enable HTTPS
 
 ```
 switch(config)restconf
